@@ -1,0 +1,25 @@
+#edit later
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: filmModule
+          uri: https://microservicefilmchallenge7-production.up.railway.app/
+          predicates:
+            - Path=/films/**, /schedules/**
+        - id: userModule
+          uri: https://microserviceuserchallenge7-production.up.railway.app/
+          predicates:
+            - Path=/users/**, /api/auth/**
+        - id: seatModule
+          uri: https://microserviceseatchallenge7-production.up.railway.app/
+          predicates:
+            - Path=/seats/**
+        - id: invoiceModule
+          uri: https://microserviceinvoicechallenge7-production.up.railway.app/
+          predicates:
+            - Path=/invoice/**
+        - id: kafkaModule
+          uri: https://microservicekafkachallenge7-production.up.railway.app/
+          predicates:
+            - Path=/post-message
