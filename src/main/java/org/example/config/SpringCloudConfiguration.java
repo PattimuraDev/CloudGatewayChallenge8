@@ -20,22 +20,21 @@ public class SpringCloudConfiguration {
      */
     @Bean
     public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
-        //edit later
         return builder.routes()
                 .route(r -> r.path("/films/**")
-                        .uri("https://microservicefilmchallenge7-production.up.railway.app/"))
+                        .uri("https://film-microservice-challenge8.up.railway.app/"))
                 .route(r -> r.path("/schedules/**")
-                        .uri("https://microservicefilmchallenge7-production.up.railway.app/"))
+                        .uri("https://film-microservice-challenge8.up.railway.app/"))
                 .route(r -> r.path("/users/**")
-                        .uri("https://microserviceuserchallenge7-production.up.railway.app/"))
+                        .uri("https://user-microservice-challenge8.up.railway.app/"))
                 .route(r -> r.path("/api/auth/**")
-                        .uri("https://microserviceuserchallenge7-production.up.railway.app/"))
+                        .uri("https://user-microservice-challenge8.up.railway.app/"))
                 .route(r -> r.path("/seats/**")
-                        .uri("https://microserviceseatchallenge7-production.up.railway.app/"))
+                        .uri("https://seat-microservice-challenge8.up.railway.app/"))
                 .route(r -> r.path("/invoice/**")
-                        .uri("https://microserviceinvoicechallenge7-production.up.railway.app/"))
+                        .uri("https://invoice-microservice-challenge8.up.railway.app/"))
                 .route(r -> r.path("/post-message")
-                        .uri("https://microservicekafkachallenge7-production.up.railway.app/"))
+                        .uri("https://kafka-microservice-challenge8.up.railway.app/"))
                 .build();
     }
 }
